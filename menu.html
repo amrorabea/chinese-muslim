@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu & Prices | El Moslem - Authentic Chinese Restaurant Cairo</title>
+  <meta name="description" content="Browse El Moslem's full menu with prices. Noodles, Rice, Dumplings, Chicken, Beef & Seafood — all Halal, all freshly prepared. Scan the QR code at your table.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏮</text></svg>">
+</head>
+<body>
+  <div class="bg-pattern" aria-hidden="true"></div>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <a href="index.html" class="logo" aria-label="El Moslem Home">
+        <span class="logo-icon">🏮</span>
+        <div>
+          <span class="logo-text">El <span>Moslem</span></span>
+          <span class="logo-sub">Authentic Chinese</span>
+        </div>
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="menu.html" class="active">Menu</a>
+        <a href="branches.html">Branches</a>
+        <a href="about.html">About</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="branches.html">Branches</a>
+    <a href="about.html">About</a>
+  </div>
+
+  <!-- ==================== PAGE HERO ==================== -->
+  <section class="page-hero">
+    <div class="page-hero-bg">
+      <img src="images/menu-hero.png" alt="Variety of authentic Chinese dishes" loading="eager">
+    </div>
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <span class="section-tag">Digital Menu</span>
+      <h1>Our <span class="text-red">Menu</span> & Prices</h1>
+      <p>Freshly prepared Halal Chinese cuisine — browse, choose, enjoy</p>
+    </div>
+  </section>
+
+  <!-- ==================== MENU CATEGORY NAV ==================== -->
+  <div class="menu-nav" id="menuNav">
+    <div class="container">
+      <div class="menu-nav-scroll">
+        <button class="menu-nav-btn active" data-category="noodles" id="nav-noodles">🍜 Noodles</button>
+        <button class="menu-nav-btn" data-category="rice" id="nav-rice">🍚 Rice</button>
+        <button class="menu-nav-btn" data-category="dumplings" id="nav-dumplings">🥟 Dumplings</button>
+        <button class="menu-nav-btn" data-category="chicken" id="nav-chicken">🍗 Chicken</button>
+        <button class="menu-nav-btn" data-category="beef" id="nav-beef">🥩 Beef</button>
+        <button class="menu-nav-btn" data-category="seafood" id="nav-seafood">🦐 Seafood</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== MENU CONTENT ==================== -->
+  <main class="container">
+
+    <!-- NOODLES -->
+    <section class="menu-category" id="noodles">
+      <div class="menu-category-header">
+        <span class="menu-category-icon">🍜</span>
+        <h2 class="menu-category-title">Noodles</h2>
+        <div class="menu-category-line"></div>
+      </div>
+      <div class="menu-items-grid">
+        <div class="menu-item">
+          <div class="menu-item-img"><img src="images/food-noodles.png" alt="Lo Mein" loading="lazy"></div>
+          <div class="menu-item-info">
+            <div class="menu-item-top">
+              <h3 class="menu-item-name">Classic Lo Mein</h3>
+              <span class="menu-item-price">EGP 95</span>
+            </div>
+            <p class="menu-item-desc">Wok-tossed egg noodles with mixed vegetables, soy sauce & sesame oil</p>
+            <div class="menu-item-tags"><span class="menu-tag halal">Halal</span><span class="menu-tag popular">Popular</span></div>
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-img"><img src="images/food-noodles.png" alt="Chow Mein" loading="lazy"></div>
+          <div class="menu-item-info">
+            <div class="menu-item-top">
+              <h3 class="menu-item-name">Chicken Chow Mein</h3>
+              <span class="menu-item-price">EGP 110</span>
+            </div>
+            <p class="menu-item-desc">Crispy fried noodles topped with chicken, vegetables & oyster sauce</p>
+            <div class="menu-item-tags"><span class="menu-tag halal">Halal</span></div>
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-img"><img src="images/food-noodles.png" alt="Dan Dan Noodles" loading="lazy"></div>
+          <div class="menu-item-info">
+            <div class="menu-item-top">
+              <h3 class="menu-item-name">Dan Dan Noodles</h3>
+              <span class="menu-item-price">EGP 105</span>
+            </div>
+            <p class="menu-item-desc">Spicy Sichuan noodles with chili oil, minced beef & crushed peanuts</p>
+            <div class="menu-item-tags"><span class="menu-tag halal">Halal</span><span class="menu-tag spicy">Spicy 🌶️</span></div>
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-img"><img src="images/food-noodles.png" alt="Beef Noodle Soup" loading="lazy"></div>
+          <div class="menu-item-info">
+            <div class="menu-item-top">
+              <h3 class="menu-item-name">Beef Noodle Soup</h3>
+              <span class="menu-item-price">EGP 120</span>
+            </div>
+            <p class="menu-item-desc">Hand-pulled noodles in rich beef bone broth with braised beef & herbs</p>
+            <div class="menu-item-tags"><span class="menu-tag halal">Halal</span><span class="menu-tag popular">Chef's Pick</span></div>
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-img"><img src="images/food-noodles.png" alt="Pad Thai Style" loading="lazy"></div>
+          <div class="menu-item-info">
+            <div class="menu-item-top">
+              <h3 class="menu-item-name">Stir-Fry Rice Noodles</h3>
+              <span class="menu-item-price">EGP 85</span>
+            </div>
+            <p class="menu-item-desc">Flat rice noodles wok-fried with bean sprouts, egg & spring onions</p>
+            <div class="menu-item-tags"><span class="menu-tag halal">Halal</span></div>
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-img"><img src="images/food-noodles.png" alt="Seafood Noodles" loading="lazy"></div>
+          <div class="menu-item-info">
+            <div class="menu-item-top">
+              <h3 class="menu-item-name">Seafood Noodles</h3>
+              <span class="menu-item-price">EGP 145</span>
+            </div>
+            <p class="menu-item-desc">Egg noodles with shrimp, squid & mixed seafood in garlic sauce</p>
+            <div class="menu-item-tags"><span class="menu-tag halal">Halal</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RICE -->
+    <section class="menu-category" id="rice">
+      <div class="menu-category-header">
+        <span class="menu-category-icon">🍚</span>
+        <h2 class="menu-category-title">Rice Dishes</h2>
+        <div class="menu-category-line"></div>
+      </div>
+      <div class="menu-items-grid">
+        <div class="menu-item">
+          <div class="menu-item-img"><img src="images/food-rice.png" alt="Fried Rice" loading="lazy"></div>
+          <div class="menu-item-info">
+            <div class="menu-item-top">
+              <h3 class="menu-item-name">Classic Fried Rice</h3>
+              <span class="menu-item-price">EGP 75</span>
+            </div>
+            <p class="menu-item-desc">Wok-tossed jasmine rice with egg, peas, carrots & spring onions</p>
+            <div class="menu-item-tags"><span class="menu-tag halal">Halal</span><span class="menu-tag popular">Popular</span></div>
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-img"><img src="images/food-rice.png" alt="Chicken Fried Rice" loading="lazy"></div>
+          <div class="menu-item-info">
+            <div class="menu-item-top">
+              <h3 class="menu-item-name">Chicken Fried Rice</h3>
+              <span class="menu-item-price">EGP 95</span>
+            </div>
+            <p class="menu-item-desc">Tender chicken pieces with fried rice, garlic & soy seasoning</p>
+            <div class="menu-item-tags"><span class="menu-tag halal">Halal</span></div>
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-img"><img src="images/food-rice.png" alt="Shrimp Fried Rice" loading="lazy"></div>
+          <div class="menu-item-info">
+            <div class="menu-item-top">
+              <h3 class="menu-item-name">Shrimp Fried Rice</h3>
+              <span class="menu-item-price">EGP 120</span>
+            </div>
+            <p class="menu-item-desc">Jumbo shrimp with aromatic fried rice, egg & chili flakes</p>
+            <div class="menu-item-tags"><span class="menu-tag halal">Halal</span></div>
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-img"><img src="images/food-rice.png" alt="Beef Fried Rice" loading="lazy"></div>
+          <div class="menu-item-info">
+            <div class="menu-item-top">
+              <h3 class="menu-item-name">Beef Fried Rice</h3>
+              <span class="menu-item-price">EGP 115</span>
+            </div>
+            <p class="menu-item-desc">Sliced beef with wok-fried rice, dark soy & bok choy</p>
+            <div class="menu-item-tags"><span class="menu-tag halal">Halal</span></div>
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-img"><img src="images/food-rice.png" alt="Steamed Rice" loading="lazy"></div>
+          <div class="menu-item-info">
+            <div class="menu-item-top">
+              <h3 class="menu-item-name">Steamed Jasmine Rice</h3>
+              <span class="menu-item-price">EGP 30</span>
+            </div>
+            <p class="menu-item-desc">Fragrant premium jasmine rice, perfectly steamed</p>
+            <div class="menu-item-tags"><span class="menu-tag halal">Halal</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DUMPLINGS -->
+    <section class="menu-category" id="dumplings">
+      <div class="menu-category-header">
+        <span class="menu-category-icon">🥟</span>
+        <h2 class="menu-category-title">Dumplings & Dim Sum</h2>
+        <div class="menu-category-line"></div>
+      </div>
+      <div class="menu-items-grid">
+        <div class="menu-item">
+          <div class="menu-item-img"><img src="images/food-dumplings.png" alt="Steamed Dumplings" loading="lazy"></div>
+          <div class="menu-item-info">
+            <div class="menu-item-top">
+              <h3 class="menu-item-name">Steamed Beef Dumplings</h3>
+              <span class="menu-item-price">EGP 75</span>
+            </div>
+            <p class="menu-item-desc">8 pieces of hand-wrapped dumplings with seasoned beef & ginger (8 pcs)</p>
+            <div class="menu-item-tags"><span class="menu-tag halal">Halal</span><span class="menu-tag popular">Popular</span></div>
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-img"><img src="images/food-dumplings.png" alt="Pan-Fried Dumplings" loading="lazy"></div>
+          <div class="menu-item-info">
+            <div class="menu-item-top">
+              <h3 class="menu-item-name">Pan-Fried Potstickers</h3>
+              <span class="menu-item-price">EGP 85</span>
+            </div>
+            <p class="menu-item-desc">Crispy-bottomed dumplings with chicken & vegetable filling (8 pcs)</p>
+            <div class="menu-item-tags"><span class="menu-tag halal">Halal</span><span class="menu-tag popular">Chef's Pick</span></div>
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-img"><img src="images/food-dumplings.png" alt="Soup Dumplings" loading="lazy"></div>
+          <div class="menu-item-info">
+            <div class="menu-item-top">
+              <h3 class="menu-item-name">Xiao Long Bao</h3>
+              <span class="menu-item-price">EGP 95</span>
+            </div>
+            <p class="menu-item-desc">Shanghai soup dumplings filled with beef & hot broth (6 pcs)</p>
+            <div class="menu-item-tags"><span class="menu-tag halal">Halal</span><span class="menu-tag popular">Signature</span></div>
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-img"><img src="images/food-dumplings.png" alt="Spring Rolls" loading="lazy"></div>
+          <div class="menu-item-info">
+            <div class="menu-item-top">
+              <h3 class="menu-item-name">Crispy Spring Rolls</h3>
+              <span class="menu-item-price">EGP 65</span>
+            </div>
+            <p class="menu-item-desc">Golden-fried rolls stuffed with vegetables & glass noodles (6 pcs)</p>
+            <div class="menu-item-tags"><span class="menu-tag halal">Halal</span></div>
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-img"><img src="images/food-dumplings.png" alt="Wontons" loading="lazy"></div>
+          <div class="menu-item-info">
+            <div class="menu-item-top">
+              <h3 class="menu-item-name">Wonton Soup</h3>
+              <span class="menu-item-price">EGP 70</span>
+            </div>
+            <p class="menu-item-desc">Silky wontons in clear chicken broth with chives & sesame</p>
+            <div class="menu-item-tags"><span class="menu-tag halal">Halal</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHICKEN -->
+    <section class="menu-category" id="chicken">
+      <div class="menu-category-header">
+        <span class="menu-category-icon">🍗</span>
+        <h2 class="menu-category-title">Chicken</h2>
+        <div class="menu-category-line"></div>
+      </div>
+      <div class="menu-items-grid">
+        <div class="menu-item">
+          <div class="menu-item-img"><img src="images/food-chicken.png" alt="Orange Chicken" loading="lazy"></div>
+          <div class="menu-item-info">
+            <div class="menu-item-top">
+              <h3 class="menu-item-name">Orange Chicken</h3>
+              <span class="menu-item-price">EGP 115</span>
+            </div>
+            <p class="menu-item-desc">Crispy battered chicken in sweet & tangy orange glaze with sesame</p>
+            <div class="menu-item-tags"><span class="menu-tag halal">Halal</span><span class="menu-tag popular">Best Seller</span></div>
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-img"><img src="images/food-chicken.png" alt="Kung Pao Chicken" loading="lazy"></div>
+          <div class="menu-item-info">
+            <div class="menu-item-top">
+              <h3 class="menu-item-name">Kung Pao Chicken</h3>
+              <span class="menu-item-price">EGP 120</span>
+            </div>
+            <p class="menu-item-desc">Stir-fried chicken with peanuts, dried chilies & Sichuan peppers</p>
+            <div class="menu-item-tags"><span class="menu-tag halal">Halal</span><span class="menu-tag spicy">Spicy 🌶️</span></div>
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-img"><img src="images/food-chicken.png" alt="Sweet & Sour Chicken" loading="lazy"></div>
+          <div class="menu-item-info">
+            <div class="menu-item-top">
+              <h3 class="menu-item-name">Sweet & Sour Chicken</h3>
+              <span class="menu-item-price">EGP 105</span>
+            </div>
+            <p class="menu-item-desc">Golden chicken bites in tangy pineapple & bell pepper sauce</p>
+            <div class="menu-item-tags"><span class="menu-tag halal">Halal</span><span class="menu-tag popular">Popular</span></div>
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-img"><img src="images/food-chicken.png" alt="Lemon Chicken" loading="lazy"></div>
+          <div class="menu-item-info">
+            <div class="menu-item-top">
+              <h3 class="menu-item-name">Lemon Chicken</h3>
+              <span class="menu-item-price">EGP 95</span>
+            </div>
+            <p class="menu-item-desc">Crispy fried chicken breast drizzled with fresh lemon sauce</p>
+            <div class="menu-item-tags"><span class="menu-tag halal">Halal</span></div>
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-img"><img src="images/food-chicken.png" alt="Garlic Chicken" loading="lazy"></div>
+          <div class="menu-item-info">
+            <div class="menu-item-top">
+              <h3 class="menu-item-name">Garlic Chicken</h3>
+              <span class="menu-item-price">EGP 110</span>
+            </div>
+            <p class="menu-item-desc">Tender chicken stir-fried with roasted garlic, chili & soy glaze</p>
+            <div class="menu-item-tags"><span class="menu-tag halal">Halal</span><span class="menu-tag spicy">Spicy 🌶️</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BEEF -->
+    <section class="menu-category" id="beef">
+      <div class="menu-category-header">
+        <span class="menu-category-icon">🥩</span>
+        <h2 class="menu-category-title">Beef</h2>
+        <div class="menu-category-line"></div>
+      </div>
+      <div class="menu-items-grid">
+        <div class="menu-item">
+          <div class="menu-item-img"><img src="images/food-beef.png" alt="Beef & Broccoli" loading="lazy"></div>
+          <div class="menu-item-info">
+            <div class="menu-item-top">
+              <h3 class="menu-item-name">Beef & Broccoli</h3>
+              <span class="menu-item-price">EGP 130</span>
+            </div>
+            <p class="menu-item-desc">Tender beef slices wok-tossed with broccoli in savory oyster sauce</p>
+            <div class="menu-item-tags"><span class="menu-tag halal">Halal</span><span class="menu-tag popular">Best Seller</span></div>
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-img"><img src="images/food-beef.png" alt="Mongolian Beef" loading="lazy"></div>
+          <div class="menu-item-info">
+            <div class="menu-item-top">
+              <h3 class="menu-item-name">Mongolian Beef</h3>
+              <span class="menu-item-price">EGP 140</span>
+            </div>
+            <p class="menu-item-desc">Crispy beef with green onions in sweet & savory dark soy glaze</p>
+            <div class="menu-item-tags"><span class="menu-tag halal">Halal</span><span class="menu-tag popular">Chef's Pick</span></div>
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-img"><img src="images/food-beef.png" alt="Pepper Steak" loading="lazy"></div>
+          <div class="menu-item-info">
+            <div class="menu-item-top">
+              <h3 class="menu-item-name">Pepper Steak</h3>
+              <span class="menu-item-price">EGP 135</span>
+            </div>
+            <p class="menu-item-desc">Sliced beef with bell peppers, onions & black pepper sauce</p>
+            <div class="menu-item-tags"><span class="menu-tag halal">Halal</span><span class="menu-tag spicy">Spicy 🌶️</span></div>
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-img"><img src="images/food-beef.png" alt="Cumin Beef" loading="lazy"></div>
+          <div class="menu-item-info">
+            <div class="menu-item-top">
+              <h3 class="menu-item-name">Sichuan Cumin Beef</h3>
+              <span class="menu-item-price">EGP 145</span>
+            </div>
+            <p class="menu-item-desc">Crispy beef strips tossed with cumin, chili flakes & Sichuan pepper</p>
+            <div class="menu-item-tags"><span class="menu-tag halal">Halal</span><span class="menu-tag spicy">Spicy 🌶️🌶️</span></div>
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-img"><img src="images/food-beef.png" alt="Beef Chop Suey" loading="lazy"></div>
+          <div class="menu-item-info">
+            <div class="menu-item-top">
+              <h3 class="menu-item-name">Beef Chop Suey</h3>
+              <span class="menu-item-price">EGP 110</span>
+            </div>
+            <p class="menu-item-desc">Beef with mixed Chinese vegetables in light garlic sauce</p>
+            <div class="menu-item-tags"><span class="menu-tag halal">Halal</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEAFOOD -->
+    <section class="menu-category" id="seafood">
+      <div class="menu-category-header">
+        <span class="menu-category-icon">🦐</span>
+        <h2 class="menu-category-title">Seafood</h2>
+        <div class="menu-category-line"></div>
+      </div>
+      <div class="menu-items-grid">
+        <div class="menu-item">
+          <div class="menu-item-img"><img src="images/food-seafood.png" alt="Garlic Shrimp" loading="lazy"></div>
+          <div class="menu-item-info">
+            <div class="menu-item-top">
+              <h3 class="menu-item-name">Garlic Butter Shrimp</h3>
+              <span class="menu-item-price">EGP 145</span>
+            </div>
+            <p class="menu-item-desc">Jumbo shrimp sautéed in garlic butter with chili & spring onions</p>
+            <div class="menu-item-tags"><span class="menu-tag halal">Halal</span><span class="menu-tag popular">Best Seller</span></div>
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-img"><img src="images/food-seafood.png" alt="Sweet Chili Shrimp" loading="lazy"></div>
+          <div class="menu-item-info">
+            <div class="menu-item-top">
+              <h3 class="menu-item-name">Sweet Chili Shrimp</h3>
+              <span class="menu-item-price">EGP 150</span>
+            </div>
+            <p class="menu-item-desc">Crispy battered shrimp in sweet chili sauce with cashews</p>
+            <div class="menu-item-tags"><span class="menu-tag halal">Halal</span><span class="menu-tag spicy">Spicy 🌶️</span></div>
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-img"><img src="images/food-seafood.png" alt="Salt & Pepper Squid" loading="lazy"></div>
+          <div class="menu-item-info">
+            <div class="menu-item-top">
+              <h3 class="menu-item-name">Salt & Pepper Squid</h3>
+              <span class="menu-item-price">EGP 120</span>
+            </div>
+            <p class="menu-item-desc">Crispy squid rings tossed with garlic, chili & salt seasoning</p>
+            <div class="menu-item-tags"><span class="menu-tag halal">Halal</span></div>
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-img"><img src="images/food-seafood.png" alt="Steamed Fish" loading="lazy"></div>
+          <div class="menu-item-info">
+            <div class="menu-item-top">
+              <h3 class="menu-item-name">Steamed Fish Fillet</h3>
+              <span class="menu-item-price">EGP 160</span>
+            </div>
+            <p class="menu-item-desc">Delicate white fish steamed with ginger, soy & sesame oil</p>
+            <div class="menu-item-tags"><span class="menu-tag halal">Halal</span><span class="menu-tag popular">Healthy</span></div>
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-img"><img src="images/food-seafood.png" alt="Seafood Platter" loading="lazy"></div>
+          <div class="menu-item-info">
+            <div class="menu-item-top">
+              <h3 class="menu-item-name">Mixed Seafood Platter</h3>
+              <span class="menu-item-price">EGP 195</span>
+            </div>
+            <p class="menu-item-desc">Shrimp, squid & fish fillet wok-fried with XO sauce & vegetables</p>
+            <div class="menu-item-tags"><span class="menu-tag halal">Halal</span><span class="menu-tag popular">Signature</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== DINE-IN REMINDER ==================== -->
+  <div class="dinein-banner" style="margin-top: var(--space-3xl);">
+    <div class="container">
+      <span class="icon">🍽️</span>
+      <p>All prices include taxes — Dine-In Only — No Delivery</p>
+      <span class="icon">☪️</span>
+      <p>100% Halal Certified Kitchen</p>
+      <span class="icon">🥢</span>
+    </div>
+  </div>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <span class="logo-icon">🏮</span>
+            <div>
+              <span class="logo-text">El <span>Moslem</span></span>
+              <span class="logo-sub">Authentic Chinese</span>
+            </div>
+          </a>
+          <p>Cairo's premier destination for authentic Halal Chinese cuisine. Handmade daily by professional Chinese Muslim chefs. Dine-in only.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu & Prices</a></li>
+            <li><a href="branches.html">Our Branches</a></li>
+            <li><a href="about.html">About Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Branches</h4>
+          <ul>
+            <li><a href="branches.html#nasr-city">Nasr City</a></li>
+            <li><a href="branches.html#tagamoa">Tagamoa El Awal</a></li>
+            <li><a href="branches.html#abassia">Abassia</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Opening Hours</h4>
+          <ul class="footer-hours">
+            <li><span class="day">Sun – Thu</span><span>11:00 AM – 11:00 PM</span></li>
+            <li><span class="day">Fri – Sat</span><span>11:00 AM – 12:00 AM</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 El Moslem Restaurant. All rights reserved. Dine-In Only — No Delivery.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook">📘</a>
+          <a href="#" aria-label="Instagram">📸</a>
+          <a href="#" aria-label="TikTok">🎵</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
