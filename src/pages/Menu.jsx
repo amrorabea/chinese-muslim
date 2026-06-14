@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useLenis } from "lenis/react";
 import HeroSection from "../components/HeroSection";
 import CategoryNav from "../components/CategoryNav";
 import DishCard from "../components/DishCard";
@@ -9,6 +10,7 @@ import menuData, { categories } from "../data/menuData";
 export default function Menu() {
   const [selectedDish, setSelectedDish] = useState(null);
   const [activeCategory, setActiveCategory] = useState("noodles");
+  const lenis = useLenis();
 
   // Track scroll position to update active category in navigation
   useEffect(() => {
@@ -40,16 +42,20 @@ export default function Menu() {
     setActiveCategory(catId);
     const element = document.getElementById(catId);
     if (element) {
-      const offset = 140; // Main navbar + Category navbar height + padding spacing
-      const bodyRect = document.body.getBoundingClientRect().top;
-      const elementRect = element.getBoundingClientRect().top;
-      const elementPosition = elementRect - bodyRect;
-      const offsetPosition = elementPosition - offset;
+      if (lenis) {
+        lenis.scrollTo(element, { offset: -140 });
+      } else {
+        const offset = 140; // Main navbar + Category navbar height + padding spacing
+        const bodyRect = document.body.getBoundingClientRect().top;
+        const elementRect = element.getBoundingClientRect().top;
+        const elementPosition = elementRect - bodyRect;
+        const offsetPosition = elementPosition - offset;
 
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth"
-      });
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth"
+        });
+      }
     }
   };
 

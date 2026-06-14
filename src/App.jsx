@@ -1,5 +1,7 @@
 import { useEffect } from "react";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { ReactLenis, useLenis } from "lenis/react";
+import "lenis/dist/lenis.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
@@ -10,9 +12,15 @@ import About from "./pages/About";
 // Scroll to top on route change
 function ScrollToTop() {
   const { pathname } = useLocation();
+  const lenis = useLenis();
+
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+    if (lenis) {
+      lenis.scrollTo(0, { immediate: true });
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [pathname, lenis]);
   return null;
 }
 
@@ -36,8 +44,10 @@ function AppLayout() {
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <AppLayout />
-    </BrowserRouter>
+    <ReactLenis root>
+      <BrowserRouter>
+        <AppLayout />
+      </BrowserRouter>
+    </ReactLenis>
   );
 }

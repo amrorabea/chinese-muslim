@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { useLenis } from "lenis/react";
 
 const categoryIcons = {
   noodles: "🍜",
@@ -11,6 +12,7 @@ const categoryIcons = {
 
 export default function DishModal({ dish, onClose }) {
   const overlayRef = useRef(null);
+  const lenis = useLenis();
 
   // Close on Escape
   useEffect(() => {
@@ -24,8 +26,12 @@ export default function DishModal({ dish, onClose }) {
   // Lock body scroll
   useEffect(() => {
     document.body.style.overflow = "hidden";
-    return () => { document.body.style.overflow = ""; };
-  }, []);
+    lenis?.stop();
+    return () => {
+      document.body.style.overflow = "";
+      lenis?.start();
+    };
+  }, [lenis]);
 
   // Close on backdrop click
   const handleBackdropClick = (e) => {
@@ -40,7 +46,7 @@ export default function DishModal({ dish, onClose }) {
   return (
     <div
       ref={overlayRef}
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 animate-fade-in"
+      className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4 animate-fade-in"
       onClick={handleBackdropClick}
       role="dialog"
       aria-modal="true"
@@ -50,7 +56,12 @@ export default function DishModal({ dish, onClose }) {
       <div className="absolute inset-0 bg-black/80 backdrop-blur-md" />
 
       {/* Modal */}
-      <div className="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto bg-neutral-900 border border-white/10 rounded-3xl shadow-2xl shadow-black/50 animate-scale-in">
+      <div className="relative w-full max-w-2xl max-h-[85vh] sm:max-h-[90vh] overflow-y-auto bg-neutral-900 border-x border-t sm:border border-white/10 rounded-t-3xl sm:rounded-3xl shadow-2xl shadow-black/50 animate-slide-up-bottom-sheet sm:animate-scale-in">
+        {/* Mobile Grab Handle */}
+        <div className="flex sm:hidden justify-center py-2.5 bg-neutral-900 border-b border-white/5 sticky top-0 z-20">
+          <div className="w-12 h-1 bg-zinc-700 rounded-full" />
+        </div>
+
         {/* Close Button */}
         <button
           onClick={onClose}
@@ -64,7 +75,7 @@ export default function DishModal({ dish, onClose }) {
         </button>
 
         {/* Image */}
-        <div className="relative aspect-video overflow-hidden rounded-t-3xl">
+        <div className="relative aspect-video overflow-hidden rounded-t-none sm:rounded-t-3xl">
           <img
             src={dish.image}
             alt={dish.name}
@@ -79,7 +90,7 @@ export default function DishModal({ dish, onClose }) {
         </div>
 
         {/* Content */}
-        <div className="p-6 md:p-8">
+        <div className="p-5 sm:p-6 md:p-8">
           {/* Tags */}
           <div className="flex flex-wrap gap-2 mb-4">
             {/* Category badge */}

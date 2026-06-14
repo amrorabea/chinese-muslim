@@ -20,7 +20,7 @@ export default function About() {
         image="/images/chef-cooking.png"
         imageAlt="Chinese Muslim chef cooking with wok"
         tag="Our Story"
-        title='About <span class="text-red-500">El Moslem</span>'
+        title='About <span class="font-arabic text-red-500 font-bold">المسلم الصيني</span>'
         subtitle="Where authentic Chinese tradition meets Halal excellence"
       />
 
